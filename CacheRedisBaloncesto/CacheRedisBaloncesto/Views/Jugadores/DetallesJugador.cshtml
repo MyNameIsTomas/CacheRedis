@@ -1,0 +1,24 @@
+﻿@model CacheRedisBaloncesto.Models.Jugador
+@{ViewBag.Title = "DetallesJugador";}
+
+<h2>DetallesJugador</h2>
+<p>@Html.ActionLink("Volver al listado", "Index")</p>
+<p>@Html.ActionLink("Favoritos", "AlmacenarFavoritos", new { idjugador = Model.IdJugador }, null)</p>
+<h2 style="color:cornflowerblue">@ViewBag.Mensaje</h2>
+<div class="container">
+    <div style="float:left;padding-right:10px">
+        <h4><b>@Model.Nombre</b></h4>
+        <hr />
+        <table>
+            <tr>
+                <td>Equipo: <b>@Model.Equipo</b></td>
+            </tr>
+            <tr>
+                <td>Posicion: <b>@Model.Posicion</b></td>
+            </tr>
+        </table>
+    </div>
+    <div style="float:left;padding-right:10px">
+        <img src="@Model.Imagen" style="width:250px;height:250px" />
+    </div>
+</div>
